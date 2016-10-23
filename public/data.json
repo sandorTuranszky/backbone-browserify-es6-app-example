@@ -1,0 +1,52 @@
+[
+  {
+    "Id":"uniqwo1",
+    "Name":"WO-0001",
+    "Status":"Open",
+    "Type":"Installation",
+    "StartDate":"22-04-2016 13:00:00",
+    "EndDate":"22-04-2016 14:00:00",
+    "Color":"Black",
+    "Description":"Install new KoelKast SF-123"
+  },
+  {
+    "Id":"uniqwo2",
+    "Name":"WO-0002",
+    "Status":"In Progress",
+    "Type":"Maintenance",
+    "StartDate":"22-04-2016 14:00:00",
+    "EndDate":"22-04-2016 17:00:00",
+    "Color":"Blue",
+    "Description":"Check freon on split-system"
+  },
+  {
+    "Id":"uniqwo3",
+    "Name":"WO-0003",
+    "Status":"Closed",
+    "Type":"Maintenance",
+    "StartDate":"21-04-2016 07:00:00",
+    "EndDate":"21-04-2016 09:00:00",
+    "Color":"Black",
+    "Description":"Clean AC"
+  },
+  {
+    "Id":"uniqwo4",
+    "Name":"WO-0004",
+    "Status":"In Progress",
+    "Type":"Installation",
+    "StartDate":"27-04-2016 11:00:00",
+    "EndDate":"27-04-2016 14:00:00",
+    "Color":"Blue",
+    "Description":"Install water heater"
+  },
+  {
+    "Id":"uniqwo5",
+    "Name":"WO-0005",
+    "Status":"Open",
+    "Type":"Failure",
+    "StartDate":"26-04-2016 18:00:00",
+    "EndDate":"26-04-2016 21:00:00",
+    "Color":"Purple",
+    "Description":"Intercom camera shows no picture"
+  }
+]

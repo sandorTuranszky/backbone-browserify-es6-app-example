@@ -1,0 +1,26 @@
+//----------------------------------------------------------
+// dropdown component
+//----------------------------------------------------------
+
+.c-dropdown {
+  position: relative;
+
+  & [data-options] {
+    top: 3.9rem;
+    left: -5000px;
+    position: absolute;
+    background: $color-blue;
+    color: $color-white-100;
+    padding: 2rem;
+    opacity: 0;
+
+    li {
+      display: block;
+      margin: 0 0 .5rem 0;
+      padding: 1rem 0;
+    }
+  }
+}
+
+//@import "button--modifiers";
+@import "dropdown--states";

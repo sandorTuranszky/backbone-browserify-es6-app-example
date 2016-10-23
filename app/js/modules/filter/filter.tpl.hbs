@@ -1,0 +1,58 @@
+<div class="m-filter">
+    <ul class="m-filter__list">
+        {{#each filters}}
+            <li {{#if options}}class="c-dropdown"{{/if}}>
+                <a {{#unless options}}data-filter="{{this.key}}"{{/unless}} role="button" class="c-button c-button--default c-button--dropdown">{{title}}</a>
+                {{#if options}}
+                    <div data-options>
+                        <ul>
+                            {{#each options}}
+                                <li>
+                                    {{#if checkbox}}
+                                        <div class="table">
+                                            <label for={{key}}>{{title}}</label>
+                                            <input data-filter={{key}} id={{key}} type="checkbox">
+                                        </div>
+                                    {{/if}}
+
+                                   {{#if options}}
+                                        <div>{{title}}</div>
+
+                                        {{#if select}}
+                                            <select>
+                                        {{/if}}
+
+                                        {{#each options}}
+                                            <li>
+                                                {{#if checkbox}}
+                                                    <div class="table">
+                                                        <label for={{key}}>{{title}}</label>
+                                                        <input data-filter={{key}} id={{key}} type="checkbox">
+                                                    </div>
+                                                {{/if}}
+
+                                                {{#if select_option}}
+                                                  <option data-filter={{key}} value="{{key}}">{{title}}</option>
+                                                {{/if}}
+                                            </li>
+                                        {{/each}}
+
+                                        {{#if select}}
+                                            </select>
+                                        {{/if}}
+                                   {{/if}}
+
+                                   {{#if input_date}}
+                                        <label for="date">{{title}}</label>
+                                        <input id="date" data-date type="date">
+                                   {{/if}}
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                {{/if}}
+            </li>
+        {{/each}}
+    </ul>
+</div>
+<div class="m-main__content" data-content>Content</div>

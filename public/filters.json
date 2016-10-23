@@ -1,0 +1,90 @@
+[
+  {
+    "input_type": "button",
+    "title": "Open",
+    "key": "status"
+  },
+  {
+    "input_type": "button",
+    "title": "<15 km",
+    "key": "distance"
+  },
+  {
+    "key": "type",
+    "input_type": "list",
+    "title": "Type",
+    "options": [
+      {
+        "input_type": "checkbox",
+        "title": "Installation",
+        "key": "inst"
+      },
+      {
+        "input_type": "checkbox",
+        "title": "Maintenance",
+        "key": "mnt"
+      },
+      {
+        "input_type": "checkbox",
+        "title": "Failure",
+        "key": "fl"
+      }
+    ]
+  },
+  {
+    "key": "type",
+    "input_type": "compound",
+    "title": "Priorities",
+    "options": [
+      {
+        "key": "colours",
+        "input_type": "list",
+        "title": "Colours",
+        "options": [
+          {
+            "input_type": "checkbox",
+            "title": "Blue",
+            "key": "blue"
+          },
+          {
+            "input_type": "checkbox",
+            "title": "Purple",
+            "key": "blue"
+          },
+          {
+            "input_type": "checkbox",
+            "title": "Black",
+            "key": "black"
+          }
+        ]
+      },
+      {
+        "key": "client",
+        "input_type": "select",
+        "title": "Clients",
+        "options": [
+          {
+            "input_type": "select_option",
+            "title": "Client 1",
+            "key": "1"
+          },
+          {
+            "input_type": "select_option",
+            "title": "Client 2",
+            "key": "2"
+          },
+          {
+            "input_type": "select_option",
+            "title": "Client 3",
+            "key": "3"
+          }
+        ]
+      },
+      {
+        "key": "date",
+        "input_type": "input_date",
+        "title": "Date"
+      }
+    ]
+  }
+]

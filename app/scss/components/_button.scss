@@ -1,0 +1,15 @@
+//----------------------------------------------------------
+// Button component
+//----------------------------------------------------------
+
+.c-button {
+  height: 1.5rem;
+  padding: .5rem 3rem;
+  line-height: 3.6;
+  cursor: pointer;
+  background: transparent;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+}
+
+@import "button--modifiers";
+@import "button--states";
