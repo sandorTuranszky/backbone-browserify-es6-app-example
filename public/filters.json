@@ -2,7 +2,7 @@
   {
     "input_type": "button",
     "title": "Open",
-    "key": "status"
+    "key": "open"
   },
   {
     "input_type": "button",

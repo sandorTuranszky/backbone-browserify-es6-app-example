@@ -3,6 +3,7 @@
 const _                   = require('underscore');
 const $                   = require('jquery');
 const Backbone            = require('Backbone');
+const app                 = require('core/application');
 const template            = require('modules/main/filters.tpl.hbs');
 const FiltersCollection   = require('modules/main/filters.collection');
 
@@ -19,6 +20,10 @@ const FiltersView  = Backbone.View.extend({
     this.filters = new FiltersCollection();
     this.listenTo(this.filters, 'error', this.onError);
     this.filters.fetch();
+
+    this.f_map = {
+      open: 'status'
+    }
   },
 
   render: function() {
@@ -29,14 +34,8 @@ const FiltersView  = Backbone.View.extend({
   filter: function(e) {
     e.preventDefault();
     let target = $(e.currentTarget);
-    let filter = target.attr('data-filter');
-
-    //html select or input val
-    if(!filter) {
-      filter = target.val();
-    }
-
-    console.log('filter: ', filter);
+    let value = target.attr('data-filter') || target.val();
+    app.trigger('filter', {key: this.f_map[value], value: value});
   },
 
   onError: function(model, response) {

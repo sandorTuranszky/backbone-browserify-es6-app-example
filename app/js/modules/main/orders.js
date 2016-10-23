@@ -3,6 +3,7 @@
 const _                   = require('underscore');
 const $                   = require('jquery');
 const Backbone            = require('Backbone');
+const app                 = require('core/application');
 const template            = require('modules/main/orders.tpl.hbs');
 const OrdersCollection    = require('modules/main/orders.collection');
 
@@ -13,12 +14,18 @@ const OrdersView  = Backbone.View.extend({
     this.orders = new OrdersCollection();
     this.listenTo(this.orders, 'error', this.onError);
     this.orders.fetch();
+
+    this.listenTo(app, 'filter', this.filter);
   },
 
   render: function() {
-    console.log(this.orders.toJSON());
-    this.$el.html(this.template({orders: this.orders.toJSON()}));
+    this.$el.html(this.template({orders: this.filtered ? this.filtered.toJSON() : this.orders.toJSON()}));
     return this;
+  },
+
+  filter: function(data) {
+    this.filtered = this.orders.filterByStatus(data);
+    this.render();
   },
 
   onError: function(model, response) {

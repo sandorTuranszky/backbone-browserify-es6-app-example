@@ -25,6 +25,7 @@ const MainView  = Backbone.View.extend({
   initSubViews: function() {
     this.filtersView = new FilterView();
     this.listenTo(this.filtersView.filters, 'sync', this.renderFilters);
+
     this.ordersView = new OrdersView();
     this.listenTo(this.ordersView.orders, 'sync', this.renderOrders);
   },
