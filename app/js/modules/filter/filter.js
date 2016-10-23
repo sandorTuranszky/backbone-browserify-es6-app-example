@@ -1,10 +1,11 @@
 'use strict';
 
-const _                 = require('underscore');
-const $                 = require('jquery');
-const Backbone          = require('Backbone');
-const template          = require('modules/filter/filter.tpl.hbs');
-const FilterCollection  = require('modules/filter/filter.collection');
+const _                   = require('underscore');
+const $                   = require('jquery');
+const Backbone            = require('Backbone');
+const template            = require('modules/filter/filter.tpl.hbs');
+const FiltersCollection   = require('modules/filter/filters.collection');
+const OrdersCollection    = require('modules/filter/orders.collection');
 
 const FilterView  = Backbone.View.extend({
   template: template,
@@ -16,14 +17,15 @@ const FilterView  = Backbone.View.extend({
   },
 
   initialize: function() {
-    this.collection = new FilterCollection();
-    this.listenTo(this.collection, 'sync', this.render);
-    this.listenTo(this.collection, 'error', this.onError);
-    this.collection.fetch();
+    //todo: listen for multiple fetch and then run render with all the data
+    this.filters = new FiltersCollection();
+    this.listenTo(this.filters, 'sync', this.render);
+    this.listenTo(this.filters, 'error', this.onError);
+    this.filters.fetch();
   },
 
   render: function() {
-    this.$el.html(this.template({filters: this.collection.toJSON()}));
+    this.$el.html(this.template({filters: this.filters.toJSON()}));
     return this;
   },
 

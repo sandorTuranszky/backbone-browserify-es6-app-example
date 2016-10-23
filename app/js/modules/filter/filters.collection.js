@@ -3,7 +3,7 @@
 const _ = require('underscore');
 const Backbone = require('Backbone');
 
-const FilterCollection = Backbone.Collection.extend({
+const FiltersCollection = Backbone.Collection.extend({
   url: './filters.json',
 
   parse: function (response) {
@@ -46,4 +46,4 @@ const FilterCollection = Backbone.Collection.extend({
 
 });
 
-module.exports = FilterCollection;
+module.exports = FiltersCollection;
