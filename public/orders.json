@@ -6,7 +6,7 @@
     "Type":"Installation",
     "StartDate":"22-04-2016 13:00:00",
     "EndDate":"22-04-2016 14:00:00",
-    "Color":"Black",
+    "Color":"Green",
     "Description":"Install new KoelKast SF-123"
   },
   {
@@ -26,7 +26,7 @@
     "Type":"Maintenance",
     "StartDate":"21-04-2016 07:00:00",
     "EndDate":"21-04-2016 09:00:00",
-    "Color":"Black",
+    "Color":"Green",
     "Description":"Clean AC"
   },
   {
@@ -46,7 +46,7 @@
     "Type":"Failure",
     "StartDate":"26-04-2016 18:00:00",
     "EndDate":"26-04-2016 21:00:00",
-    "Color":"Purple",
+    "Color":"Red",
     "Description":"Intercom camera shows no picture"
   }
 ]

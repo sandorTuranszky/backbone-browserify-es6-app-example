@@ -1,0 +1,29 @@
+//----------------------------------------------------------
+// List component modifiers
+//----------------------------------------------------------
+
+.c-list__item--blue {
+  border-color: $color-blue;
+}
+
+.c-list__item--green {
+  border-color: $color-green;
+}
+
+.c-list__item--red {
+  border-color: $color-red;
+}
+
+.c-list__itemHeader {
+  .c-list__item--blue & {
+    background-color: $color-blue;  
+  }
+
+  .c-list__item--green & {
+    background-color: $color-green;
+  }
+
+  .c-list__item--red & {
+    background-color: $color-red;
+  }
+}

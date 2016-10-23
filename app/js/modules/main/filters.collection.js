@@ -1,7 +1,7 @@
 'use strict';
 
-const _ = require('underscore');
-const Backbone = require('Backbone');
+const _         = require('underscore');
+const Backbone  = require('Backbone');
 
 const FiltersCollection = Backbone.Collection.extend({
   url: './filters.json',

@@ -48,13 +48,13 @@
           },
           {
             "input_type": "checkbox",
-            "title": "Purple",
-            "key": "blue"
+            "title": "Green",
+            "key": "green"
           },
           {
             "input_type": "checkbox",
-            "title": "Black",
-            "key": "black"
+            "title": "Red",
+            "key": "red"
           }
         ]
       },

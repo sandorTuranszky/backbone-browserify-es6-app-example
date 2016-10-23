@@ -1,0 +1,19 @@
+<div class="c-list">
+    {{#orders}}
+        <div class="c-list__item c-list__item--{{Color}}">
+            <div class="c-list__itemHeader">
+                <span>{{StartDate}}</span>
+                <span>{{Name}}</span>
+                <span>{{Type}}</span>
+                <span>Status: {{Status}}</span>
+            </div>
+
+            <div class="c-list__itemBody">
+                <span>{{Id}}</span>
+                <span></span>
+                <span></span>
+                <span>{{Description}}</span>
+            </div>
+        </div>
+    {{/orders}}
+</div>

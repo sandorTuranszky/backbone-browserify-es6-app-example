@@ -1,0 +1,38 @@
+//----------------------------------------------------------
+// List component
+//----------------------------------------------------------
+
+.c-list {
+  padding: 1rem 2rem;
+}
+
+.c-list__item {
+  border: .1rem solid $color-black-26;
+  margin-bottom: 1rem;
+}
+
+.c-list__itemHeader {
+  width: 100%;
+  display: table;
+  color: #ffffff;
+
+  & span {
+    padding: .5rem;
+    display: table-cell;
+    width: 25%;
+  }
+}
+
+.c-list__itemBody {
+  width: 100%;
+  height: 5rem;
+  display: table;
+
+  & span {
+    padding: .5rem;
+    display: table-cell;
+    width: 25%;
+  }
+}
+
+@import "list--modifiers";

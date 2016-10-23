@@ -86,19 +86,19 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); }
 
 .c-button--default {
-  border: 1px solid #448AFF;
-  color: #448AFF; }
+  border: 1px solid #03A9F4;
+  color: #03A9F4; }
 
 .c-button:hover {
-  background: #448AFF;
+  background: #03A9F4;
   color: white; }
 
-.m-filter {
+.c-filter {
   padding: 1rem 2rem; }
 
-.m-filter__list {
+.c-filter__list {
   list-style: none; }
-  .m-filter__list li {
+  .c-filter__list li {
     display: inline-block; }
 
 .c-dropdown {
@@ -107,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 3.9rem;
     left: -5000px;
     position: absolute;
-    background: #448AFF;
+    background: #03A9F4;
     color: white;
     padding: 2rem;
     opacity: 0; }
@@ -119,6 +119,47 @@ h1, h2, h3, h4, h5, h6 {
 .c-dropdown:hover div {
   left: 0;
   opacity: 1; }
+
+.c-list {
+  padding: 1rem 2rem; }
+
+.c-list__item {
+  border: 0.1rem solid rgba(0, 0, 0, 0.26);
+  margin-bottom: 1rem; }
+
+.c-list__itemHeader {
+  width: 100%;
+  display: table;
+  color: #ffffff; }
+  .c-list__itemHeader span {
+    padding: .5rem;
+    display: table-cell;
+    width: 25%; }
+
+.c-list__itemBody {
+  width: 100%;
+  height: 5rem;
+  display: table; }
+  .c-list__itemBody span {
+    padding: .5rem;
+    display: table-cell;
+    width: 25%; }
+
+.c-list__item--blue {
+  border-color: #03A9F4; }
+
+.c-list__item--green {
+  border-color: #009688; }
+
+.c-list__item--red {
+  border-color: #F44336; }
+
+.c-list__item--blue .c-list__itemHeader {
+  background-color: #03A9F4; }
+.c-list__item--green .c-list__itemHeader {
+  background-color: #009688; }
+.c-list__item--red .c-list__itemHeader {
+  background-color: #F44336; }
 
 .m-main {
   border: 0.1rem solid rgba(0, 0, 0, 0.26);

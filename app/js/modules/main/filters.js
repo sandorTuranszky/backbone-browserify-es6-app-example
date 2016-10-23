@@ -3,8 +3,8 @@
 const _                   = require('underscore');
 const $                   = require('jquery');
 const Backbone            = require('Backbone');
-const template            = require('modules/filters/filters.tpl.hbs');
-const FiltersCollection   = require('modules/filters/filters.collection');
+const template            = require('modules/main/filters.tpl.hbs');
+const FiltersCollection   = require('modules/main/filters.collection');
 
 const FiltersView  = Backbone.View.extend({
   template: template,
