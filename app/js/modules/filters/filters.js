@@ -3,11 +3,10 @@
 const _                   = require('underscore');
 const $                   = require('jquery');
 const Backbone            = require('Backbone');
-const template            = require('modules/filter/filter.tpl.hbs');
-const FiltersCollection   = require('modules/filter/filters.collection');
-const OrdersCollection    = require('modules/filter/orders.collection');
+const template            = require('modules/filters/filters.tpl.hbs');
+const FiltersCollection   = require('modules/filters/filters.collection');
 
-const FilterView  = Backbone.View.extend({
+const FiltersView  = Backbone.View.extend({
   template: template,
 
   events: {
@@ -17,9 +16,7 @@ const FilterView  = Backbone.View.extend({
   },
 
   initialize: function() {
-    //todo: listen for multiple fetch and then run render with all the data
     this.filters = new FiltersCollection();
-    this.listenTo(this.filters, 'sync', this.render);
     this.listenTo(this.filters, 'error', this.onError);
     this.filters.fetch();
   },
@@ -52,4 +49,4 @@ const FilterView  = Backbone.View.extend({
   }
 });
 
-module.exports = FilterView;
+module.exports = FiltersView;

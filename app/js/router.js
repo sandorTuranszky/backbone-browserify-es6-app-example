@@ -1,7 +1,7 @@
 'use strict';
 
 const Backbone    = require('Backbone');
-const FilterView  = require('modules/filter/filter');
+const MainView    = require('modules/main/main');
 const app         = require('core/application');
 
 const Router = Backbone.Router.extend({
@@ -12,8 +12,8 @@ const Router = Backbone.Router.extend({
   },
 
   filter: function(param=null) {
-    let filterView = new FilterView({param: param});
-    app.DOM.app_view.html(filterView.render().$el)
+    let mainView = new MainView({param: param});
+    app.DOM.app_view.html(mainView.render().$el)
   },
 
   defaultRoute: function(path) {
