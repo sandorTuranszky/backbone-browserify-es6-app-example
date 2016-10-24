@@ -14,11 +14,15 @@ const OrdersCollection = Backbone.Collection.extend({
     return response;
   },
 
+  capitalize: function(value) {
+    return value.charAt(0).toUpperCase() + value.slice(1);
+  },
+
   filterByStatus: function(data) {
     if(data.key || data.value) {
-      let key = data.key.charAt(0).toUpperCase() + data.key.slice(1);
-      let value = data.value.charAt(0).toUpperCase() + data.value.slice(1);
-      let filtered = this.where({[key]: value});
+      var filtered = this.where({
+        [this.capitalize(data.key)]: this.capitalize(data.value)
+    });
 
       return new OrdersCollection(filtered);
     }
