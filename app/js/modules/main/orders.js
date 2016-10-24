@@ -24,7 +24,7 @@ const OrdersView  = Backbone.View.extend({
   },
 
   filter: function(data) {
-    this.filtered = this.orders.filterByStatus(data);
+    this.filtered = this.orders.filterBy(data);
     this.render();
   },
 

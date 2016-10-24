@@ -2,7 +2,7 @@
     <ul class="c-filter__list">
         {{#each filters}}
             <li {{#if options}}class="c-dropdown"{{/if}}>
-                <a {{#unless options}}data-filter="{{this.key}}"{{/unless}} role="button" class="c-button c-button--default c-button--dropdown">{{title}}</a>
+                <a {{#unless options}}data-filter-btn="{{this.key}}"{{/unless}} role="button" class="c-button c-button--default c-button--dropdown">{{title}}</a>
                 {{#if options}}
                     <div data-options>
                         <ul>
@@ -11,7 +11,7 @@
                                     {{#if checkbox}}
                                         <div class="table">
                                             <label for={{key}}>{{title}}</label>
-                                            <input data-filter={{key}} id={{key}} type="checkbox">
+                                            <input data-filter-checkbox={{key}} id={{key}} value={{key}} type="checkbox">
                                         </div>
                                     {{/if}}
 
@@ -22,21 +22,24 @@
                                             <select>
                                         {{/if}}
 
-                                        {{#each options}}
-                                            <li>
-                                                {{#if checkbox}}
-                                                    <div class="table">
-                                                        <label for={{key}}>{{title}}</label>
-                                                        <input data-filter={{key}} id={{key}} type="checkbox">
-                                                    </div>
-                                                {{/if}}
+                                       {{#if options}}
+                                           <ul>
+                                            {{#each options}}
+                                                <li>
+                                                    {{#if checkbox}}
+                                                        <div class="table">
+                                                            <label for={{key}}>{{title}}</label>
+                                                            <input data-filter-checkbox={{key}} id={{key}} value={{key}} type="checkbox">
+                                                        </div>
+                                                    {{/if}}
 
-                                                {{#if select_option}}
-                                                  <option data-filter={{key}} value="{{key}}">{{title}}</option>
-                                                {{/if}}
-                                            </li>
-                                        {{/each}}
-
+                                                    {{#if select_option}}
+                                                      <option data-filter={{key}} value="{{key}}">{{title}}</option>
+                                                    {{/if}}
+                                                </li>
+                                            {{/each}}
+                                           </ul>
+                                       {{/if}}
                                         {{#if select}}
                                             </select>
                                         {{/if}}

@@ -17,17 +17,17 @@
       {
         "input_type": "checkbox",
         "title": "Installation",
-        "key": "inst"
+        "key": "installation"
       },
       {
         "input_type": "checkbox",
         "title": "Maintenance",
-        "key": "mnt"
+        "key": "maintenance"
       },
       {
         "input_type": "checkbox",
         "title": "Failure",
-        "key": "fl"
+        "key": "failure"
       }
     ]
   },

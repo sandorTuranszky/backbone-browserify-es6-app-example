@@ -11,7 +11,8 @@ const FiltersView  = Backbone.View.extend({
   template: template,
 
   events: {
-    'click [data-filter]': 'filter',
+    'click [data-filter-btn]': 'filterBtn',
+    'click [data-filter-checkbox]': 'filterCheckbox',
     'change select': 'filter',
     'change [data-date]': 'filter'
   },
@@ -21,9 +22,12 @@ const FiltersView  = Backbone.View.extend({
     this.listenTo(this.filters, 'error', this.onError);
     this.filters.fetch();
 
-    this.f = [];
+    this.active_f = [];
     this.f_map = {
-      open: 'status'
+      open: 'status',
+      installation: 'type',
+      maintenance: 'type',
+      failure: 'type'
     }
   },
 
@@ -32,26 +36,24 @@ const FiltersView  = Backbone.View.extend({
     return this;
   },
 
-  filter: function(e) {
+  filterBtn: function(e) {
     e.preventDefault();
     let target = $(e.currentTarget);
 
     //set/unset active state
     target.toggleClass('c-button--active');
 
-    let value = target.hasClass('c-button--active') ? target.attr('data-filter') || target.val() : '';
+    let value = target.hasClass('c-button--active') ? target.attr('data-filter-btn') : '';
     let data = {key: this.f_map[value], value: value};
-
-    //save some filters to be used together with other filters
-    this.storeFilter(data);
 
     app.trigger('filter', data);
   },
 
-  storeFilter: function(data) {
-    if(data.key === 'status') {
-      this.f.push(data);
-    }
+  filterCheckbox: function(e) {
+    let target = $(e.currentTarget);
+    let value = target.is(':checked') ? target.attr('data-filter-checkbox') : '';
+    let data = {key: this.f_map[value], value: value};
+    app.trigger('filter', data);
   },
 
   onError: function(model, response) {

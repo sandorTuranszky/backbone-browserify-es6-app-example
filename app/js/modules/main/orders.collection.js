@@ -18,7 +18,7 @@ const OrdersCollection = Backbone.Collection.extend({
     return value.charAt(0).toUpperCase() + value.slice(1);
   },
 
-  filterByStatus: function(data) {
+  filterBy: function(data) {
     if(data.key || data.value) {
       var filtered = this.where({
         [this.capitalize(data.key)]: this.capitalize(data.value)
