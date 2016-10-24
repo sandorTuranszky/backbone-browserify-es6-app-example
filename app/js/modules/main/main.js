@@ -38,19 +38,6 @@ const MainView  = Backbone.View.extend({
     this.DOM.orders.html(this.ordersView.render().$el);
   },
 
-  filter: function(e) {
-    e.preventDefault();
-    let target = $(e.currentTarget);
-    let filter = target.attr('data-filter');
-
-    //html select or input val
-    if(!filter) {
-      filter = target.val();
-    }
-
-    console.log('filter: ', filter);
-  },
-
   onError: function(model, response) {
     console.log('error: ', response);
   },
