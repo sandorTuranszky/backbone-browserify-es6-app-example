@@ -25,6 +25,7 @@
     "gulp-streamify": "^1.0.2",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
+    "handlebars": "^4.0.5",
     "hbsfy": "^2.7.0",
     "istanbulify": "^0.1.0",
     "jasmine": "^2.5.2",
