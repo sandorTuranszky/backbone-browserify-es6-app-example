@@ -15,13 +15,15 @@ const OrdersCollection = Backbone.Collection.extend({
   },
 
   filterByStatus: function(data) {
-    let key = data.key.charAt(0).toUpperCase() + data.key.slice(1);
-    let value = data.value.charAt(0).toUpperCase() + data.value.slice(1);
-    var filtered = this.where(function(order) {
-      return order.get(key) === value;
-    });
+    if(data.key || data.value) {
+      let key = data.key.charAt(0).toUpperCase() + data.key.slice(1);
+      let value = data.value.charAt(0).toUpperCase() + data.value.slice(1);
+      let filtered = this.where({[key]: value});
 
-    return new OrdersCollection(filtered);
+      return new OrdersCollection(filtered);
+    }
+
+    return new OrdersCollection(this.models);
   }
 });
 

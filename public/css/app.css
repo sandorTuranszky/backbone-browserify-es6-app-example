@@ -93,6 +93,10 @@ h1, h2, h3, h4, h5, h6 {
   background: #03A9F4;
   color: white; }
 
+.c-button--active {
+  background: #03A9F4;
+  color: white; }
+
 .c-filter {
   padding: 1rem 2rem; }
 

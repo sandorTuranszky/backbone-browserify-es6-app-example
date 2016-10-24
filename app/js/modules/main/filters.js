@@ -35,7 +35,8 @@ const FiltersView  = Backbone.View.extend({
   filter: function(e) {
     e.preventDefault();
     let target = $(e.currentTarget);
-    let value = target.attr('data-filter') || target.val();
+    target.toggleClass('c-button--active');
+    let value = target.hasClass('c-button--active') ? target.attr('data-filter') || target.val() : '';
     let data = {key: this.f_map[value], value: value};
 
     //save some filters to be used together with other filters
