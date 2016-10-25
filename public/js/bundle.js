@@ -475,7 +475,7 @@ var Router = Backbone.Router.extend({
   routes: {
     '': 'filter',
     'filter/:param': 'filter',
-    '*path': 'defaultRoute'
+    '*path': 'filter'
   },
 
   filter: function filter() {
